@@ -2,11 +2,8 @@
 #### 技术栈
 
 - SpringBooot
-- MyBatis Plus
 - Vue
 - MySQL
-- JWT
-- Swagger
 
 #### 演示
 
