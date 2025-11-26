@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+
+springdoc:
+  # API 文档基本信息
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  info:
+    title: 云批原盘接口文档
+    description: ''
+    terms-of-service: ''
+    version: '1.0'
+  # 扫描指定包（可选，默认扫描所有 @RestController）
+  packages-to-scan: com.example.yunpiyuanpan.controller
