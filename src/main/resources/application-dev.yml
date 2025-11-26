@@ -1,0 +1,62 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/javaee_project
+    username: root
+    password: abc14250
+    hikari:
+      max-lifetime: 120000
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 809464456@qq.com          # 你的QQ邮箱
+    password: sncjjncbjvazbbbd     # 不是QQ密码！是授权码
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false                # 使用465端口时，starttls应为false
+            required: false
+          ssl:
+            enable: true                 # 必须启用SSL
+            trust: smtp.qq.com
+  #request size exceeds报错解决，扩容允许上传的最大文件大小
+  servlet:
+    multipart:
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+
+server:
+  port: 8989
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#文件存储路径前缀
+storage-lib: "D:/YPFile/YPFiles"
+
+#二维码背景图片存放路径
+qrcodebgPath: "D:/YPFile/bg1.jpg"
+
+#生成二维码的存放路径
+qrcodewithbgPath: "D:/YPFile/qrcode.png"
+
+#主机号
+ipConfig: "localhost"
+
+sa-token:
+  token-name: satoken     # token名称 (同时也是cookie名称)
+  timeout: 2592000        # token有效期，单位s,默认30天,-1代表永不过期
+  activity-timeout: -1    # token临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  is-concurrent: true     # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-share: true          # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  token-style: uuid       # token风格
+  is-log: true            # 是否输出操作日志
+
+
