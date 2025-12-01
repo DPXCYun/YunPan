@@ -44,9 +44,11 @@ axios.defaults.timeout = 8000;
 
 // 注意：不要设置全局 Content-Type 为 application/json！
 // 因为我们现在要发 form 数据，由拦截器动态决定 Content-Type
+//
 
 new Vue({
     router,
     store,
     render: h => h(App)
+
 }).$mount('#app')
